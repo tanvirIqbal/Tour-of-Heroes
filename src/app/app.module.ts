@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroesService } from './heroes/heroes.service';
+import { MessageComponent } from './message/message.component';
+import { MessageService } from './message/message.service';
 
 
 
@@ -14,13 +16,14 @@ import { HeroesService } from './heroes/heroes.service';
   declarations: [
     AppComponent,
     HeroesComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [HeroesService],
+  providers: [HeroesService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
