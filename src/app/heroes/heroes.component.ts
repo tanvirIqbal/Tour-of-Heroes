@@ -23,8 +23,13 @@ export class HeroesComponent implements OnInit {
   selectedHero: Hero;
 
   // Part 4
-  getHeroes() : void {
-    this.heroes = this.heroService.getHeroes();
+  // getHeroes() : void {
+  //   this.heroes = this.heroService.getHeroes();
+  // }
+  // Observable Step 3 : Subscribe
+  getHeroes(): void {
+    this.heroService.getHeroes()
+        .subscribe(heroes => this.heroes = heroes);
   }
   
   onSelect(hero: Hero): void {
