@@ -21,3 +21,9 @@ Run `ng g c ComponentName`
 ## Create Service
 
 Run `ng g s ServiceName` or `ng g s ServiceName --module=app`
+
+## Create Module
+
+Run `ng g m app-routing --flat --module=app`
+`flat` puts the file in src/app instead of its own folder.
+`--module=app` tells the CLI to register it in the imports array of the AppModule.
