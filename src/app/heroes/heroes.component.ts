@@ -20,7 +20,7 @@ export class HeroesComponent implements OnInit {
   // Part 2
   heroes: Hero[];
 
-  selectedHero: Hero;
+  //selectedHero: Hero;
 
   // Part 4
   // getHeroes() : void {
@@ -32,9 +32,9 @@ export class HeroesComponent implements OnInit {
         .subscribe(heroes => this.heroes = heroes);
   }
   
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
+  // onSelect(hero: Hero): void {
+  //   this.selectedHero = hero;
+  // }
 
  
 
