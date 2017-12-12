@@ -20,16 +20,21 @@ export class HeroesService {
   //   return HEROES;
   // }
   // Observable Step 2 : Write Method
-  getHeroes(): Observable<Hero[]> {
-    this.messageService.add('HeroService : Fetched Heroes');
-    return of(HEROES);
-  }
+  // getHeroes(): Observable<Hero[]> {
+  //   this.messageService.add('HeroService : Fetched Heroes');
+  //   return of(HEROES);
+  // }
 
   getHero(id: number): Observable<Hero> {
     // Todo: send the message _after_ fetching the hero
     this.messageService.add(`HeroService: fetched hero id=${id}`);
     return of(HEROES.find(hero => hero.id === id));
   }
+
+  /** GET heroes from the server */
+getHeroes (): Observable<Hero[]> {
+  return this.http.get<Hero[]>(this.heroesUrl)
+}
 
   /** Log a HeroService message with the MessageService */
   private log(message: string) {
