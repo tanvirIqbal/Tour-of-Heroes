@@ -15,6 +15,8 @@ import { HttpClientModule }    from '@angular/common/http';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+
 
 
 @NgModule({
@@ -31,6 +33,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    FroalaEditorModule.forRoot(), FroalaViewModule.forRoot(),
     
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
